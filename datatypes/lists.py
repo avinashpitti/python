@@ -61,6 +61,12 @@ print(a+b) #concatenation
 print(a*3) #repetition
 
 
+names=['avinash','varun','rakesh','amar','chandu',3,['samson','gill','abhishek','ishan'],-2,45,4.8]
+
+print(names[6][1])
+
+
+
 
 
 
