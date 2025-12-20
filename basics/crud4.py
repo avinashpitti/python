@@ -12,6 +12,6 @@ print(product)
 price=499
 print(price)
 
-#delete
-del price
-print(price)
+# #delete
+# del price
+# print(price)

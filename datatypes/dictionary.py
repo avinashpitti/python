@@ -80,5 +80,22 @@ squares = {x: x*x for x in range(1, 6)}
 print(squares)
 
 
+#using .get() method
+#It never gives error
+# .get() is designed to be safe. It prevents KeyError
+
+d={"name":"avi","age":22,"course":"BCA"}
+print(d.get("name"))
+print(d.get("gender")) #returns None if key is not found
+# If key exists it returns value else returns None
+
+print(d.get("city","Delhi")) #returns Delhi if key is not found
+# If key exists it returns value else returns default value
+
+x = [10, 20]
+y = x
+y.insert(0, 5)
+print(x)
+
 
 
