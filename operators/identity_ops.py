@@ -4,6 +4,10 @@
 
 # python usually gives small values same memory location
 # but for large values it gives mostly different memory location
+
+#Integers and floats are always stored as different objects in memory,
+#even if their values look the same.# a=10 b=10.0
+
 a=10
 b=10
 c=23376878996

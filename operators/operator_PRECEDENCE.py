@@ -1,11 +1,12 @@
 #OPERATOR PRECEDENCE decides which operator is executed first
 #It is same like bodmas in maths
-
+#Exponent has right to left associativity
+#remaining all operators have left to right associativity
 '''
 | Priority | Operator       | Meaning                      |
 | -------- | -------------- | ---------------------------- |
 | 1️⃣      | `()`           | Parentheses                  |
-| 2️⃣      | `**`           | Exponent                     |
+| 2️⃣      | `**`           | Exponent (right to left)     |
 | 3️⃣      | `+  -` (unary) | Unary plus/minus             |
 | 4️⃣      | `*  /  //  %`  | Multiply, divide, floor, mod |
 | 5️⃣      | `+  -`         | Addition, subtraction        |

@@ -2,6 +2,10 @@
 # ==, !=, >, <, >=, <=
 # The result is always boolean
 
+#0, 0.0, "", [], {},(), None → False
+#Everything else → True for ex: " ",1,"False"
+
+
 a=10
 b=10
 print("a is equals to b",a==b)

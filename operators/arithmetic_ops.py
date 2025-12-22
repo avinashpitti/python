@@ -33,3 +33,8 @@ print("The value of x**y is",x**y)  #Exponentiation(power)
 print(True/True)#floor
 print(False/True)#floor
 # print(True/False)#zero division error
+
+
+quotient,remainder=divmod(18,4)
+print("quotient",quotient)
+print("remainder",remainder)
