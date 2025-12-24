@@ -39,5 +39,10 @@ enames=['sg','pg','rg','modi']
 for ename in enames:
     print(ename)
 
-while enames:
-    print(enames.pop())
+print("----------------")
+
+i=0
+while i<len(enames):
+    print(enames[i])
+    i+=1
+
