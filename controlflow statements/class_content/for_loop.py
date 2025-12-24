@@ -1,3 +1,15 @@
+for i in range(20,10,-1):
+    print(i)
+
+
+# groceries=['sugar','milk','dal']
+
+# for item in range(len(groceries)):
+#     print(item)
+
+
+print("______________________")
+
 text="Helloworld"
 for char in text:
     print(char)
