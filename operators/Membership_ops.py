@@ -52,3 +52,13 @@ print("name" in student)     # True
 print("avi" in student)      # False
 print("avi" in student.values())  # True
 
+
+a=0.1+0.2
+print(a==0.3)
+
+x=[1,2,3]
+y=x[:]
+print(x is y)
+
+
+
