@@ -5,6 +5,12 @@ for score in scores:
     total+=score
 print(f'total runs scored by all is {total}')
 
+highest=scores[0]#assume that the first value is highest
+for score in scores:
+    if score>highest:
+        highest=score
+print(f'highest score is {highest}')
+
 
 cricketers_score=[19,28,45,104,56,34,19,5]
 
