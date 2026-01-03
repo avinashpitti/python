@@ -44,4 +44,10 @@ print(f"returns a float b/w a and b: {random.uniform(1.6,4.2)}")
 
 import secrets
 
-print(secrets.randbelow(10))
+print(secrets.randbelow(10))#Safer replacement for random.randrange()
+
+letters="ABCDEFGHIJ"
+print(secrets.choice(letters))
+#secure version of choice used for passwords. 
+
+

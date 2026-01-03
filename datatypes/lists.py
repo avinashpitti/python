@@ -65,6 +65,16 @@ names=['avinash','varun','rakesh','amar','chandu',3,['samson','gill','abhishek',
 
 print(names[6][1])
 
+#linear search vs hashing
+# “Linear search checks elements sequentially, 
+# while hashing uses hash functions for direct access,
+# making it much faster.”
+
+#hashing is faster than linear search
+#linear search is used in lists and tuples
+#hashing is used in sets and dictionaries
+
+
 
 
 
