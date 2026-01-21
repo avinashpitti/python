@@ -1,0 +1,5 @@
+Hello
+everyone
+This is avinash
+learning
+python fullstack

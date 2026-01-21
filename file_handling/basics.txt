@@ -1,0 +1,10 @@
+r(read) It read/display the data
+w(write) It overwrites the existing data(i.e.. deletes the old data)
+a(append) It appends the data at the end(doesn't deletes the old data)
+r+(read+write)
+w+(write+read)
+a+(append+read)
+tell(to say cursor at which position i.e.character) ex: f.tell()
+seek(to bring cursor to the position we need) ex: f.seek(0)
+
+cursor position is very important.eof means end of the file.
