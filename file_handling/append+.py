@@ -1,0 +1,6 @@
+f=open('write.txt','a+')
+f.write("prostack academy")
+f.seek(0)
+data=f.read()
+print(data)
+f.close()

@@ -1,0 +1,6 @@
+f=open('write.txt','a')
+data=f.write('avinash is appending')
+print(data)
+data=f.write("\n by writing some content")
+print(data)
+f.close()
