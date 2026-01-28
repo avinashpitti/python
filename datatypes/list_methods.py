@@ -77,5 +77,7 @@ print(matrix[0][1])
 #list of characters
 print(list('python'))
 
+print(list((1,2,3,4))) # from tuple to list
+
 
 
