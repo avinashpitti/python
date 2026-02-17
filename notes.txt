@@ -1,0 +1,217 @@
+What is Python?
+Python is a high-level,interpreted,general purpose,object oriented programming language.
+High-level : 
+High level means easy for humans to read and write.
+english like syntax
+Interpreted :
+Interpreted means code runs line by line
+unlike compiled languages which first compile whole code then execute
+it stops at that line if there is an error
+General purpose:
+General purpose means it is not limited to one type of work
+python can be used for :
+Web development : frameworks(django,fastapi,flask)
+Data Science : libraries(numpy,pandas,matplotlib,seaborn)
+Machine learning : libraries(tensorflow,pytorch,scikit-learn,keras)
+Automation/Scripting : libraries(selenium,beautifulsoup,requests,os) 
+Game development :framework(pygame)
+Desktop applications :frameworks(tkinter,pyqt,kivy)
+so it is flexible and versatile
+OOP language:
+Object oriented means
+It supports programming using :
+Classes
+Objects
+Encapsulation
+Inheritance
+Polymorphism
+OOP helps :
+Organize code
+Make reusable components
+Build large applications easily
+
+
+2. compiled vs interpreted language
+A compiled language first translates the entire source code into machine code before execution, 
+whereas an interpreted language executes the code line by line using an interpreter.
+
+
+3. Features of python
+Easy to read
+Simple syntax
+Indentation based (instead of brackets it uses indentation)
+Interpreted language
+Dynamically typed
+Cross platform(means you can run your code anywhere, windows,macos,linux)
+Huge libraries
+
+
+4.Identifiers :
+Identifiers are the names used to identify a variable, function,
+class, module or other object.
+
+In short, Anything you name in python is identifier.
+
+Rules for Identifiers
+1. Identifiers should start with a letter or an underscore (_).
+2. Identifiers can only contain letters, digits, and underscores.
+3. Identifiers are case-sensitive.
+4. Identifiers should be descriptive and meaningful.
+5. Identifiers should not be reserved keywords.
+6. Naming conventions:
+    snake_case for variables and functions
+    PascalCase for classes
+    uppercase for constants
+
+
+
+5. Indentation :
+What is indentation?
+Indentation refers to the spaces at the beginning of a code line.
+It is used to define a block of code.
+
+Where indentation is used?
+Indentation is used in loops, conditionals, functions, classes, etc.
+
+What is the default indentation?
+The default indentation is 4 spaces.
+
+Where indentation starts?
+Indentation starts immediately after a colon(:).
+
+
+6.keywords and its length
+import keyword
+print(keyword.kwlist)
+# keyword are the reserved words in python
+# len is a function in python
+# len(keyword.kwlist) is a function call
+# print is a function in python
+# No.of keywords in python is 35
+print(len(keyword.kwlist))
+
+
+7. What is variable?
+A variable is used to store data.
+Python automatically detects datatype
+No need to declare type separately
+variables are case sensitive
+In python variables are dynamically typed, it doesn't have a fixed type
+x=100 # x is currently pointing to an integer
+x='avinash' # x is now pointing to string
+
+
+8. Data types in python?
+Data type tells python what kind of data is stored in a variable.
+Text Type : str 
+Numeric Type : Int,float,complex
+Sequence Type : List,Tuple,Range
+Mapping Type : Dict 
+Set Types : Set,frozenset
+Boolean Type : bool 
+Binary Type : bytes,bytesarray,memoryview
+NoneType : NoneType
+x=5
+print(type(x)) # Int
+
+
+9. Mutable vs Immutable
+A mutable object is an object whose value or state can be changed after it is created.
+nums = [1, 2, 3]
+nums.append(4)
+Mutable types :
+list,dict,set,bytearray
+
+An immutable object is an object whose value or state cannot be changed after it is created.
+x = 10
+x = 20
+Here 10 is not modified, A new object 20 is created and 'x' now refers to it.
+Immutable types :
+int,float,complex,bool,str,tuple,frozenset,bytes,NoneType
+
+
+10.Complete data types?
+Int :
+An integer is a whole number, without a decimal point. It can be positive,negative or zero.
+Integers are immutable
+x=-5
+print(type(x)) # int
+
+Float :
+A float is a number that contains a decimal point.
+Floats are immutable
+x=10.23
+print(type(x)) # float
+
+Complex :
+A complex number has a real part and an imaginary part
+complex numbers are immutable
+x=2+4j
+
+Boolean :
+Boolean represents one of two values
+is_active =True
+is_logged_in =False
+bool(0) #False
+bool(1) # True
+bool('Hi') # True
+
+str:
+A string is a sequence of characters enclosed in single or double quotes
+# In Python, almost any data type can be converted into a string using the str() function.
+#ordered, immutable, supports indexing
+name='avinash'
+name[0] # a
+
+List :
+A list is an ordered, mutable collection of elements,allows duplicates and heterogenous elements,
+allows indexing
+properties:
+ordered,mutable,allows duplicates and indexing
+
+Tuple :
+A tuple is a built-in Python data type used to store multiple values in a single variable.
+parathenses are not mandatory for tuple
+a,b=10,20
+comma is what creates a tuple
+tuple is immutable(read only)
+
+Set :
+A set is a built-in Python data type used to store multiple unique values in a single variable.
+Set = unordered + mutable + unique elements
+
+set is mutable
+Elements in set are immutable
+duplicates are automatically removed.
+
+Dict :
+#A dictionary is a built-in Python data type 
+#It stores data in key : value pairs.
+#Duplicate keys are not allowed(keys must be unique)
+#Duplicate values are allowed
+
+Bytes :
+Bytes is an immutable sequence of bytes(numbers from 0 to 255)
+It is used to represent binary data like :
+Images,Audio,Files,Network Data
+properties :
+Immutable
+ordered
+values must be between 0 to 255
+used for binary data
+
+Bytesarray :
+bytearray is a mutable sequence of bytes
+It is similar to bytes but can be modified
+
+
+
+
+
+
+
+
+
+
+
+
