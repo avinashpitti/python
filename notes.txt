@@ -83,11 +83,11 @@ Indentation starts immediately after a colon(:).
 6.keywords and its length
 import keyword
 print(keyword.kwlist)
-# keyword are the reserved words in python
-# len is a function in python
-# len(keyword.kwlist) is a function call
-# print is a function in python
-# No.of keywords in python is 35
+keyword are the reserved words in python
+len is a function in python
+len(keyword.kwlist) is a function call
+print is a function in python
+No.of keywords in python is 35
 print(len(keyword.kwlist))
 
 
@@ -158,7 +158,7 @@ bool('Hi') # True
 
 str:
 A string is a sequence of characters enclosed in single or double quotes
-# In Python, almost any data type can be converted into a string using the str() function.
+In Python, almost any data type can be converted into a string using the str() function.
 #ordered, immutable, supports indexing
 name='avinash'
 name[0] # a
