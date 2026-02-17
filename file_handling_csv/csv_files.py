@@ -5,6 +5,7 @@ with open('emp.csv', 'r') as fp:
         print(row[1])
         print(row[2])
 
+
 # Moving data frp, source(emp.csv) to destination(data.csv) file
 
 import csv
