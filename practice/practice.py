@@ -1,37 +1,67 @@
-s={}
-print(type(set))
+student={
+    'name':'Avinash',
+    'age' :22,
+    'course':'python',
+    'gender':'Male'
+}
 
-se=set()
-print(type(se))
+print(type(student))
+print(student['name'])
+print(student['age'])
+print(student)
 
-a={1,2,3,2,2,1,6}
-print(a)
-a.add(7)
-print(a)
-a.remove(3) # throws error if not present
-print(a)
+for key in student:
+    print(key)
 
-a.discard(5) # Doesn't show error if not present
-print(a)
+for key,value in student.items():
+    print(key,value)
 
-a.pop()
-print(a) # since set is unordered pop removes random element
+print(student.keys())
+print(student.values())
 
-a.clear()
-print(a)
+del student['age']
+print(student)
 
-x={1,2,3,4}
-y={3,4,5,6,7}
+student['city']='Bangalore'
+print(student)
 
-print(x | y) # union
-print(x & y) # intersection
-print(x - y)
-print(x ^ y) # symmetric difference
+student['age']='65'
+print(student)
 
-z={1,2,3}
-z.update([3,4,5])
-print(z)
+# print(student('xyz')) # keyerror
+print(student.get('xyz')) # None
 
-v={1,2,3}
-v.update([4])
-print(v)
+print('Here we go')
+
+
+for key,value in student.items():
+    print(key,value)
+
+print(student.keys())
+print(student.values())
+print(student.items())
+
+
+for key in student:
+    print(key)
+
+print("**********************")
+for value in student:
+    print(value)
+
+print("**********************")
+
+for value in student.values():
+    print(value)
+
+print("**********************")
+
+
+for value in student.items() :
+    print(value)
+
+print("**********************")
+
+d={'x':10}
+d.update({'x':50,'y':100})
+print(d)
