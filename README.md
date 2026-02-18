@@ -166,10 +166,12 @@ name='avinash'
 name[0] # a
 
 List :
-A list is an ordered, mutable collection of elements,allows duplicates and heterogenous elements,
-allows indexing
-properties:
-ordered,mutable,allows duplicates and indexing
+list is a collection of elements stored in a single variable
+list is mutable(read and write)
+list is ordered and allows duplicates
+In python list is a heterogenous data structure,meaning it can store
+elements of any datatype-including other lists,sets,dictionaries,tuples etc.
+
 
 Tuple :
 A tuple is a built-in Python data type used to store multiple values in a single variable.
@@ -187,10 +189,10 @@ Elements in set are immutable
 duplicates are automatically removed.
 
 Dict :
-#A dictionary is a built-in Python data type 
-#It stores data in key : value pairs.
-#Duplicate keys are not allowed(keys must be unique)
-#Duplicate values are allowed
+A dictionary is a built-in Python data type 
+It stores data in key : value pairs.
+Duplicate keys are not allowed(keys must be unique)
+Duplicate values are allowed
 
 Bytes :
 Bytes is an immutable sequence of bytes(numbers from 0 to 255)
