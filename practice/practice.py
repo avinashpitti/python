@@ -1,35 +1,103 @@
-info=[10,20,30,2.22,True,{},[1,2,3,4,5,6,7,8],()]
-print(type(info))
-print(info)
-print(len(info))
-print(info[-2][1:4])
+name='Avinash'
+print(type(name))
+print(name[-1])
+print(name[0])
+print(name[::-1])
 
-for inform in info:
-    print(inform)
+msg='''
+This is a 
+multiline 
+string
+'''
+print(msg)
+print(type(msg))
 
-enames=['rahul','sonia','priyanka','modi']
-print(enames)
-print(enames[2]) # priyanka
-# print(enames[8]) # Index out of range
+print(msg[7])
+print(msg[7:])
+print(msg[7::3])
 
-for ename in enames:
-    print(ename)
+course='python'
+# course[0]='j' # str object doesn't support item assignment
+print(course)
+course='j'+course[1:]
+print(course)
 
-enames[0]='amit'
-print(enames)
+sub=course.upper()
+print(sub)
 
-del enames[2]
-print(len(enames))
-print(enames)
+lang='  This   is   my  backend language   '
+print(lang)
+print(lang.strip()) # strip removes spaces from both the ends(front and end, not in between)
 
-nums=[2,3,4,5,6]
-print(3 in nums) 
-print(8 in nums)
+print(lang.replace('backend','frontend'))
 
-a=[1,2,3]
-b=[4,5,6]
-print(a+b)
-print(a*4)
-print(b*2)
+# lang.replace('my','your') # This doesn't change, it works only when you store in a variable
+# print(lang)
+
+change=lang.replace('my','your')
+print(change)
+
+print(lang.find('i'))
+
+print('hello'.find('l')) # number of l
+
+f_name='avi'
+l_name='nash'
+print(f_name+l_name)
+
+fname='United'
+lname='Kingdom'
+print(fname+lname)
+print(fname+" "+lname)
+print((fname+" "+lname+" ")*4)
+print(fname*4)
+print(fname+lname*4)
+print((fname+lname)*4)
+print((fname+lname+" ")*4)
+
+# my_name=input('Enter a name : ')
+# print(my_name[0])
+# print(my_name[-1])
+# print(my_name[::-1])
+# print(len(my_name))
+
+emps=['avi','balu','chandu']
+for emp in emps:
+    print(emp)
+
+language=' javascript '
+print(language.strip())
+print(language.rstrip())
+print(language.lstrip())
+
+para='India is my country'
+para=para.split(',')
+print(para)
+
+print("avinash".isalpha())
+print("arun".isnumeric())
+print("arun".islower())
+print("arun".isalnum())
+
+pro_language=' Javascript '
+rem=pro_language.strip()
+print(rem)
+print(rem.lower())
+
+if rem.lower().startswith('a'):
+    print(rem)
+
+else:
+    print("Doesn't start with a")
 
 
+casc='    '
+print(casc)
+print(type(casc))
+casc=casc.lower().strip()
+if casc=="":
+    print('empty string')
+elif casc.lower().startswith('a'):
+    print('starts with a')
+else:
+    print("Doesn't start with a")
