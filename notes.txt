@@ -177,6 +177,18 @@ a,b=10,20
 comma is what creates a tuple
 tuple is immutable(read only)
 
+tupel is immutable only at the outer level
+t = (1, [2,3])
+t[1][0] = 100
+print(t) #(1, [100, 3])
+It means :
+you can't change tuple elements directly.
+But if a tuple contains mutable object (like a list)
+you can modify that inner object
+y=(10,20,(30,40))
+y[2][2]=444
+print(y) # Tuple object doesn't supports item assignment
+
 Set :
 A set is a built-in Python data type used to store multiple unique values in a single variable.
 Set = unordered + mutable + unique elements
