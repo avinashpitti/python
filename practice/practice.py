@@ -1,38 +1,61 @@
-nums=[1,2]
-print(type(nums))
-nums.append(3)
-print(nums)
-nums.append(4)
-print(nums)
-nums.pop()
-print(nums)
-nums.append(6)
-# nums.extend([6])
-print(nums)
-print(len(nums))
-nums.insert(1,1000)
-print(nums)
-# nums.remove(50) # removes by value, value error
-nums.remove(3)
-print(nums)
-nums.pop(0)
-print(nums)
-print(nums.index(2))
-print(nums)
-print(nums.count(1000))
-print(nums)
-nums.sort()
-print(nums)
-nums.sort(reverse=True)
+a = [1,2,3]
+b=a.copy()
+a.append(4)
+print(b)
+
+c=[1,2,3]
+d=c
+c.append(4)
+print(d)
+c.remove(2)
+print(d)
+
+a = [[1,2], [3,4]]
+b = a.copy()
+
+a[0][0] = 100
+
+print(a)
+print(b)
+
+c=[2,[3,4]]
+d=c.copy()
+c[0]=777
+print(c)
+print(d)
+
+e=[2,[3,4]]
+f=e.copy()
+e[1]=5
+print(e)
+print(f)
+
+g=[2,[3,4]]
+h=g.copy()
+g[1][0]=999
+print(g)
+print(h)
+
+x = [[10]]
+y = x.copy()
+
+x[0] = [99]
+
+print(x)
+print(y)
+
+import copy
+p=[[1,2]]
+q=copy.deepcopy(p)
+p[0][0]=100
+print(p)
+print(q)
+
+nums = [5, 6, 7]
+nums.insert(-1, 99)
 print(nums)
 
-numbers=[10,20,30]
-numbers.append([40,50])
-print(numbers)
-numbers.extend(nums)
-print(numbers)
-
-numbers.extend([56,67,78,89,100])
-print(numbers)
-
+nums = [1,2,3]
+nums.insert(len(nums), 50)
+print(nums) # [1,2,3,50]
 
