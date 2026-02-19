@@ -1,96 +1,67 @@
+course='python'
+print(type(course)) #str
+
+x=3
+print(type(x)) # int
+
+y=4.1
+print(type(y)) # float
+
+z=3+4j
+print(type(z)) # complex
+
+students=['avinash','shruti','ramesh']
+print(type(students)) # list
+
+nums=(1,2.77,8,True)
+print(type(nums)) # tuple
+
 student={
-    'name':'Avinash',
-    'age':22,
-    'address':{
-        'city':'Bangalore',
-        'state':'Karnataka',
-        'zipcode':500037
-    }
+    'name' : 'avinash',
+    'age' : 22,
+    'city':'bengaluru'
 }
 
-print(student)
-print(type(student))
-print(student['address'])
-print(student['address']['city'])
-print(student['address']['zipcode'])
+print(type(student)) # dict
 
-student['address']['city']='Mysore'
-print(student['address'])
+info={}
+print(type(info)) # empty dict
 
-print("********************")
+inform=set()
+print(type(inform)) # empty set
 
-for key,value in student.items():
-    print(key,value)
+information={1,2,3,4,2,2,8}
+print(type(information)) # set
 
-for key,value in student['address'].items():
-    print(key,value)
+isStudent= True
+print(type(isStudent)) # bool
 
+x=None
+print(type(x)) # NoneType
 
-employees = {
-    101: {"name": "Rahul", "age": 30},
-    102: {"name": "Sonia", "age": 28},
-    103: {"name": "Priya", "age": 25}
-}
+r=range(5)
+print(type(r)) # range
 
-print(employees[102]['name'])
-employees[103]["age"]=26
-print(employees[103]["age"])
+b=bytes()
+print(type(b)) # bytes
 
-employees[104]={"name":"modi","age":45}
+bb=bytes([1,2,157]) # bytes must be in range(0,256) # Immutable
+print(type(bb)) # bytes
 
-print(employees[104])
-print(employees)
+ba=bytearray()
+print(type(ba)) # bytearray
 
-# printing the employees who is greater than 28
+baa=bytearray((1,2,46)) # bytearray must be in range(0,256) # Mutable
+print(type(baa)) # bytearray
 
-for emp in employees.values():
-    if emp["age"] > 28 :
-        print(emp['name'])
+print(baa)
 
+fs=frozenset()
+print(type(fs)) # fronzenset
 
-for emp in employees.values():
-    if emp["name"].lower().startswith("p"):
-        print(emp)
+fs=frozenset((1,23,53)) 
+print(type(fs))  # fronzenset
 
-nums=[1,2,3,4]
-squares={n*n for n in nums}
-print(squares)
+fs=frozenset({4,3,90})
+print(type(fs)) # frozenset
 
-numbers=[1,2,3,4,5,6]
-sqrs={n:n*n for n in numbers}
-print(sqrs)
-
-even_sqrs={n:n*n for n in numbers if n % 2==0}
-print(even_sqrs)
-
-students={
-    'Rahul':85,
-    "Sonia":92,
-    'priyanka':78,
-    'Modi':87
-}
-
-# students with marks >80
-
-top_students={name:marks for name ,marks in students.items() if marks > 80}
-print(top_students)
-
-updating={name:marks+5 for name,marks in students.items()}
-print(updating)
-
-employees = {
-    101: {"name": "Rahul", "age": 30},
-    102: {"name": "Sonia", "age": 28},
-    103: {"name": "Priya", "age": 25}
-}
-
-# for emp in employees.values() :
-#     if emp["age"]>26:
-#         print(emp)
-
-filtered={
-    emp_id:emp
-    for emp_id,emp in employees.items()
-    if emp['age']>25
-}
-print(filtered)
