@@ -366,6 +366,19 @@ when a key appears twice, the second one wins.It overwrites.
 merged={"a":1,"b":99,"c":3}
 
 
+24.Which operators in python gives Boolean as output?
+comparison operators (>,<,==,!=,<=,>=)
+Logical operators (and, or, not)
+membership operators (in, not in)
+Identity operators (is , is not)
+
+25. Difference between is and ==
+is - Checks if both variables point to the same object in memory
+== - Checks if the values of both variables are equal
+
+
+
+
 
 
 
