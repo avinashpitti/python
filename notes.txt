@@ -348,6 +348,18 @@ To go right-to-left, you need a negative step:
 s[-1:-6:-1]  # '!dlroW'
 
 
+23. Dictionary unpacking
+** unpacks a dictionary into key:value pairs
+d1 = {"a": 1, "b": 2}
+d2 = {"b": 99, "c": 3}
+merged = {**d1, **d2}
+print(merged) 
+
+{**d1, **d2}
+# is equivalent to writing:
+{"a": 1, "b": 2, "b": 99, "c": 3}
+when a key appears twice, the second one wins.It overwrites.
+merged={"a":1,"b":99,"c":3}
 
 
 
