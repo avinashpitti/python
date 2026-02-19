@@ -314,6 +314,42 @@ dict
 d = {[1,2]: "hello"}  # ❌ error
 
 
+21. append(),extend()add()update()?
+append() extend() used in lists
+add() update() used in sets
+
+append() adds single element at the end 
+extend() adds multiple elements at the end(adds elements individually from the iterable)
+nums=[1,2]
+nums.append([3,4,5])
+print(nums)  # output : [1,2,[3,4,5,]]
+
+nums=[1,2]
+nums.extend([3,4,5])
+print(nums)  # output : [1,2,3,4,5]
+Note : Everything iterable can be used in extend():
+list,tuple,set,string,Range
+
+add() adds a single element
+update() adds multiple elements from an iterable
+
+
+22. slicing()
+s = "Hello, World!"
+print(s[7:12]) # World(In slicing start value is included,end is not)
+print(s[-6:-1]) # World(Negative indexing starts from -1, not 0)
+print(s[::-1]) # !dlroW ,olleH(It reverses the string)
+
+print(s[-1:-6]) # By default slicing moves from left to right
+You're asking Python to start at ! and move right to reach W — but W is to the left of !. 
+Python can't go backwards with a positive step, so it returns an empty string "".
+
+To go right-to-left, you need a negative step:
+s[-1:-6:-1]  # '!dlroW'
+
+
+
+
 
 
 
