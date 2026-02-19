@@ -156,6 +156,10 @@ bool(0) #False
 bool(1) # True
 bool('Hi') # True
 
+False: 0, "", [], {}, None
+Truth: Everything else 
+
+
 str:
 A string is a sequence of characters enclosed in single or double quotes
 In Python, almost any data type can be converted into a string using the str() function.
