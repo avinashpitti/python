@@ -1,0 +1,54 @@
+# Aliasing
+
+a = [1, 2, 3]
+print(id(a))        # prints memory address of list a (e.g. 140234567)
+b = a               # b is an alias of a — both point to SAME memory
+print(id(b))        # same id as a (no new object created)
+b.append(5)         # modifies the shared object → a is also affected
+a.extend([7,8,9])   # modifies the shared object → b is also affected
+print(a)            # [1, 2, 3, 5, 7, 8, 9]
+print(b)            # [1, 2, 3, 5, 7, 8, 9] — same object, same result
+
+# shallow copy(without nesting)
+
+a = [1, 2, 3]
+print(id(a))        # prints memory address of a (e.g. 140234567)
+b = a.copy()        # b is a SHALLOW COPY — new object created
+print(id(b))        # different id from a (separate object in memory)
+b.append(5)         # only modifies b — a is not affected
+a.extend([7,8,9])   # only modifies a — b is not affected
+print(a)            # [1, 2, 3, 7, 8, 9]
+print(b)            # [1, 2, 3, 5]
+
+# shallow copy(with nesting)
+
+a = [[1, 2], 3]
+b = a.copy()        # shallow copy — new outer list, but inner objects are shared
+print(id(a))        # memory address of outer list a
+print(id(b))        # different from a (new outer list)
+b[0].append(99)     # b[0] and a[0] point to SAME inner list [1,2] — both affected
+#b[1].append(99)  #b[1] is an int,int is immutable so it throws attribute error
+print(b)            # [[1, 2, 99], 3]
+print(a)            # [[1, 2, 99], 3] — a[0] is affected because inner list is shared
+# Even though id(a) and id(b) are different,
+# the first element of both lists points to the exact same memory address.
+
+# Deep copy
+
+import copy # deepcopy requires import copy
+a = [[1, 2], 3]
+print(id(a))        # memory address of original list a
+b = copy.deepcopy(a)# deep copy — completely independent copy at every level
+print(id(b))        # different id from a (new outer list)
+b[0].append(99)     # only modifies b's inner list — a is NOT affected
+#b[1].append(99)  #b[1] is an int,int is immutable so it throws attribute error
+a[0].extend([22,33,44,55]) # only modifies a's inner list — b is NOT affected
+print(b)            # [[1, 2, 99], 3]
+print(a)            # [[1, 2, 22, 33, 44, 55], 3]
+
+
+# The key takeaway across all four blocks:
+
+# - **Aliasing** → same id, fully shared, every change reflects in both
+# - **Shallow copy** → different id for outer list, but inner objects are still shared
+# - **Deep copy** → different id at every level, completely independent, nothing shared
