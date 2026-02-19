@@ -218,6 +218,107 @@ bytearray is a mutable sequence of bytes
 It is similar to bytes but can be modified
 
 
+11. Mutable vs Immutable
+mutable vs immutable
+mutable : mutable means can be changed after creation
+If you modify it the memory address remains the same
+list,set,dict,bytearray are mutable datatypes.Immutable : Immutable means can't be changed after creation
+If you modify it, python creates a new object in memory
+Remaining all are immutable.
+
+
+12. Is tuple completely immutable?
+Tuple is immutable but...if tuple contains mutable object,that object can change
+t = (1, [2, 3])
+t[1].append(4)
+
+print(t) # (1, [2, 3, 4])
+
+13. Why can't we use list as dictionary keys
+Dictionary keys must be hashable
+A list is mutable 
+Mutable objects are not hashable
+Therefore,list can't be used as a dictionary key
+
+14. What is shallow copy?
+A shallow copy creates a new outer object
+But inner objects still share same memory
+a=[[1,2],[3,4]]
+b=a.copy()
+print(id(a))
+print(id(b))
+
+a ---->  [  ----> [1,2]   ----> [3,4]  ]
+b ---->  [  ----> [1,2]   ----> [3,4]  ]
+outer list is new
+But inner list is still same
+a[0].append(99) # you modified the inner list, so both see the change
+print(a)
+print(b)
+
+
+15. Ways to create a shallow copy?
+b = a.copy()
+b = list(a)
+b = a[:]
+These all are shallow copies
+
+
+16. What is deepcopy?
+deepcopy creates new outer object
+deepcopy creates new inner objects
+completely independent
+We have to import copy 
+
+import copy
+a = [[1, 2], [3, 4]]
+b = copy.deepcopy(a)
+
+a[0].append(99)
+
+print(a)
+print(b)
+
+17. What is aliasing?
+b=a
+no copy at all
+Both refer to same object
+that is called aliasing
+
+
+18. What is hashable?
+A hashable object :
+has fixed hash value
+cannot change after creation
+can be used as dictionary key
+can be stored in set
+usually immutable datatypes :
+int
+float
+str
+tuple(if all elements are hashable)
+frozenset
+d = {(1,2): "hello"}  # works
+
+19.Is tuple always hashable?
+No
+Tuple is hashable if all the elements are hashable
+
+
+20. What is unhashable?
+if object can change --> hash would change --> dictionary breaks.
+so mutable types are unhashable:
+list
+Set
+dict
+d = {[1,2]: "hello"}  # ❌ error
+
+
+
+
+
+
+
 
 
 

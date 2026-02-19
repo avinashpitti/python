@@ -1,67 +1,74 @@
-course='python'
-print(type(course)) #str
+# mutable vs immutable
+# mutable : mutable means can be changed after creation
+# If you modify it the memory address remains the same
+# list,set,dict,bytearray are mutable datatypes.
 
-x=3
-print(type(x)) # int
+# Immutable : Immutable means can't be changed after creation
+# If you modify it, python creates a new object in memory
+# Remaining all are immutable.
 
-y=4.1
-print(type(y)) # float
 
-z=3+4j
-print(type(z)) # complex
+nums=[1,2,3]
+print(id(nums))
+print(nums)
 
-students=['avinash','shruti','ramesh']
-print(type(students)) # list
+nums.append(4)
+print(id(nums))
+print(nums)
 
-nums=(1,2.77,8,True)
-print(type(nums)) # tuple
+x=10
+print(id(x))
+print(x)
+x+=1
+print(id(x))
+print(x)
 
-student={
-    'name' : 'avinash',
-    'age' : 22,
-    'city':'bengaluru'
-}
+name='avinash '
+print(id(name))
+print(id)
 
-print(type(student)) # dict
+name+='avi'
+print(id(name))
+print(name)
 
-info={}
-print(type(info)) # empty dict
 
-inform=set()
-print(type(inform)) # empty set
+t=(1,2,[3,4,5])
+print(id(t))
+print(t)
+t[2].append(9)
+print(id(t))
+print(t)
 
-information={1,2,3,4,2,2,8}
-print(type(information)) # set
+a=[1,2]
+b=a
+a=[5,6]
+print(a)
+print(b)
 
-isStudent= True
-print(type(isStudent)) # bool
+a=[1,2]
+print(id(a))
+b=a
+print(id(b))
+c=a.copy()
+print(id(c))
+a.append(3)
+print(id(a))
+print(a)
+print(b)
+print(c)
 
-x=None
-print(type(x)) # NoneType
+import copy
 
-r=range(5)
-print(type(r)) # range
+a = [[1, 2], [3, 4]]
+print(id(a))
+b = copy.deepcopy(a)
+print(id(b))
 
-b=bytes()
-print(type(b)) # bytes
+a[0].append(99)
+print(id(a))
 
-bb=bytes([1,2,157]) # bytes must be in range(0,256) # Immutable
-print(type(bb)) # bytes
+print(a)
+print(b)
 
-ba=bytearray()
-print(type(ba)) # bytearray
-
-baa=bytearray((1,2,46)) # bytearray must be in range(0,256) # Mutable
-print(type(baa)) # bytearray
-
-print(baa)
-
-fs=frozenset()
-print(type(fs)) # fronzenset
-
-fs=frozenset((1,23,53)) 
-print(type(fs))  # fronzenset
-
-fs=frozenset({4,3,90})
-print(type(fs)) # frozenset
-
+d = {(1,2): "hello"}  # works
+print(d)
