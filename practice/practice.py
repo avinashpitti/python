@@ -1,34 +1,21 @@
-x=5
-y=5.0
-print(id(x))
-print(id(y))
-print(x ==y)
-print(x is y)
+x=10
+print('even' if x%2==0 else "odd")
 
-print(10 and 20 and 30)
-print(0 and 10)
-print(0 and 0)
-print(10 or 20)
-print(20 or 10)
-print(0 or 10)
+y=11
+print('even' if y%2==0 else 'odd')
 
-a=0.1+0.2
-print(a==0.3)
+a=91
+if a>40:
+    print('pass')
+    if a>80:
+        print('with A Grade')
+    elif a>60:
+        print('With B Grade')
+    elif a>50:
+        print('with C Grade')
+    else:
+        print('with D Grade')
+else:
+    print('Fail')
 
-x=[1,2,3]
-y=x[:]
-print(x)
-print(y)
-print(x==y)
-print(x is y)
-
-student={
-    'name':'avi',
-    'sub':'python'
-}
-
-print('name' in student)
-print('avi' in student.values())
-print('sub' not in student)
-print('python' in student.values())
 
