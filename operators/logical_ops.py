@@ -18,9 +18,8 @@ print(not 5<7)
 # In python, any non zero number is considered as true
 # 0 is considered as false
 print("the value of 10 and 20 is",10 and 20)
-#The and operator checks the first value,if the first value is false
-# it returns that value.
-# If first value is true it returns second value
+# and rule: Returns the first falsy value, or the last value if all are truthy.
+#or rule: Returns the first truthy value, or the last value if all are falsy.
 print("the value of 20 and 10 is",20 and 10)
 print("the value of 0 and 10 is",0 and 10)
 print("the value of 0 and 0 is",0 and 0)

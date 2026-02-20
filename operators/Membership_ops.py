@@ -58,7 +58,8 @@ print(a==0.3)
 
 x=[1,2,3]
 y=x[:]
-print(x is y)
+z=x.copy()
+print(id(z))
 
 
 

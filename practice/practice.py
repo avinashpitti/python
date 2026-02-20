@@ -1,39 +1,34 @@
-#1
-x = 10
-print(x > 5 and x < 20)# True and True --> True
-print(x > 5 and x < 8)# True and False --> False
-print(x > 5 or x < 8)# True or False --> True
+x=5
+y=5.0
+print(id(x))
+print(id(y))
+print(x ==y)
+print(x is y)
 
-#2
-lst = [1, 2, 3, 4, 5]
-print(3 in lst) # True
-print(6 not in lst) # True
-print(6 in lst) # False
+print(10 and 20 and 30)
+print(0 and 10)
+print(0 and 0)
+print(10 or 20)
+print(20 or 10)
+print(0 or 10)
 
-#3
-print(not True) # False
-print(not False) # True
-print(not 0) # True
-print(not 1) # False
+a=0.1+0.2
+print(a==0.3)
 
-#4
-a = [1, 2, 3]
-b = a
-c = [1, 2, 3]
-print(a is b) # True(same memory location)
-print(a is c) # False (different memory location)
-print(a == c) # True (equality operator just looks for values)
+x=[1,2,3]
+y=x[:]
+print(x)
+print(y)
+print(x==y)
+print(x is y)
 
-#5
-x = 5
-y = 10
-z = 15
-print(x < y and y < z) # True and True --> True
-print(x > y or y < z) # False or True --> True
-print(not(x > y)) # True
+student={
+    'name':'avi',
+    'sub':'python'
+}
 
-#6
-d = {"name": "Avinash", "age": 20}
-print("name" in d) # True
-print("Avinash" in d) # False
-print("age" not in d) # False
+print('name' in student)
+print('avi' in student.values())
+print('sub' not in student)
+print('python' in student.values())
+
